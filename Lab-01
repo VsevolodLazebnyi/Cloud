@@ -47,34 +47,38 @@
 
 Перед началом выполнения лабораторной работы был изучен **теоретический материал**, необходимый для данной ЛР. 
 
+``` ifconfig ``` - Пакет который мы скачали. По команде  ifconfig показывает ip adress, который понадобится нам для работы.
+
 **Ход работы:**
 
 При выполнении данной лабораторной работы мы использовали две системы WSL и одну VirtualBox(Ubuntu) машину:
 
-   ![lab1.1]([https://github.com/VsevolodLazebnyi/cloud-ict-2023/blob/main/add/lab1.1])
+   ![lab1.1](https://github.com/VsevolodLazebnyi/cloud-ict-2023/blob/main/add/lab1.1.jpg?raw=true)
 
 WSL Добавил на наши основные компьютеры подсистему Linux(Ubuntu) для Windows.
 Между двумя компьютерами и виртуальной машиной "linuxvmvllazebnyi" настроили такой тип связи как сетевой мост, что гарантировало бы подключение к одной сети.
 
 1. Скачали пакет sudo ifconfig. 
 Нашли IP через терминал системы Linux с помощью команды ifconfig.
-IP maks1m:
-IP vllazebnyi:
-IP linuxvmvllazebnyi:
+<div align="center">
+  
+```
+    IP maks1m@: 172.28.7.52
+    IP vllazebnyi@: 172.20.0.252
+    IP linuxvmvllazebnyi@: 172.20.0.255
+```
 
-   
-   
-
-
-2. Затем подключаемся к виртуальной машине "linuxvmvllazebnyi" и через неё перекидываем файл на подсистему “maks1m”. 
+<div align="left">
+  
+3. Затем подключаемся к виртуальной машине "linuxvmvllazebnyi" и через неё перекидываем файл на подсистему “maks1m”. 
 С использованием команд: 
 ``` ssh*username*@*ip* ``` и  ``` scp*username1*@*ip*:~*path* *username2*@*ip*:~*path* ```
 
-   
-
+   ![lab1.2](https://github.com/VsevolodLazebnyi/cloud-ict-2023/blob/main/add/lab1.2.jpg?raw=true)
 
 4. Перекинули в обратную сторону (через виртуальную машину на WSL “vllazebnyi”, пользуясь теми же командами:
 
+ ![lab1.3](https://github.com/VsevolodLazebnyi/cloud-ict-2023/blob/main/add/lab1.3.jpg?raw=true)
   
 <a name="Лабораторная 1* (со звездочкой)"></a>
 ## Лабораторная 1* (со звездочкой)
@@ -94,13 +98,18 @@ IP linuxvmvllazebnyi:
 ``` ssh-keygen -t rsa ```
 (Мы взяли уже существующий ключ для Git Bash и скопировали его в подсистему)
 
+ ![lab1.4](https://github.com/VsevolodLazebnyi/cloud-ict-2023/blob/main/add/lab1.4.jpg?raw=true)
+
+  ![lab1.5](https://github.com/VsevolodLazebnyi/cloud-ict-2023/blob/main/add/lab1.5.png?raw=true)
 
 
-2. Далее копируем shh ключ на другое устройство
+
+3. Далее копируем shh ключ на другое устройство
 ``` ssh-copy-id *username@ip* ```
+  ![lab1.6](https://github.com/VsevolodLazebnyi/cloud-ict-2023/blob/main/add/lab1.6.png?raw=true)
 
 
 
-Все готово!
+## Все готово!
 
 

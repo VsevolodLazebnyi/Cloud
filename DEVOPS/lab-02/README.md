@@ -51,7 +51,7 @@
 
 6. Проверяем, что приложение работает:
 
-   <img src="./kartino4ki/l2.png" alt="drawing" width="500"/>
+   ![12](https://github.com/VsevolodLazebnyi/cloud-ict-2023/blob/main/DEVOPS/lab-02/kartino4ki/l2.jpg?raw=true)
 
 ## Плохой Dockerfile
 

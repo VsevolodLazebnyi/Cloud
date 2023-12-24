@@ -1,0 +1,36 @@
+IT Tower;Service Family;Service Type;Service Sub Type;Service Usage Type;Meter Category;Meter Sub-Category;Meter Name;Consumed Service;YandexCloud Service;YandexCloud Service;Else
+Compute;Containers;Azure Container Instanses;Container group;Compute Hours;Container Instances;Container Instances;Core Duration;Microsoft.ContainerInstance; Yandex Serverless Containers;Cloud Containers;SberCloud
+Compute;Containers;Azure Container Instanses;Container group;Compute Hours;Container Instances;Container Instances;Duration;Microsoft.ContainerInstance; Yandex Serverless Containers;Cloud Containers;SberCloud
+Compute;Containers;Azure Container Instanses;Container group;Number of Executions;Container Instances;Container Instances;Executions;Microsoft.ContainerInstance; Yandex Serverless Containers;Cloud Containers;SberCloud
+Compute;Containers;Azure Container Instanses;Container group;Compute Hours;Container Instances;;Memory Duration;Microsoft.ContainerInstance; Yandex Serverless Containers;Cloud Containers;SberCloud
+Compute;Containers;Azure Container Instanses;Container group;Compute Hours;Container Instances;;vCPU Duration;Microsoft.ContainerInstance; Yandex Serverless Containers;Cloud Containers;SberCloud
+Infrastructure;Containers;Azure Container Registry;Small Registry;Storage Capacity;Container Registry;Small;Registry Unit;Microsoft.ContainerRegistry;Yandex Container Registry;;
+Infrastructure;Containers;Azure Container Registry;Registry;Storage Capacity;Container Registry;Basic;Registry Unit;Microsoft.ContainerRegistry;Yandex Container Registry;;
+Infrastructure;Containers;Azure Container Registry;Standard Registry;Storage Capacity;Container Registry;Standard;Registry Unit;Microsoft.ContainerRegistry;Yandex Container Registry;;
+Infrastructure;Containers;Azure Container Registry;Premium Registry;Storage Capacity;Container Registry;Premium;Registry Unit;Microsoft.ContainerRegistry;Yandex Container Registry;;
+Infrastructure;Containers;Azure Container Registry;Additional Storage;Compute Hours;Container Registry;;%Duration;Microsoft.ContainerRegistry;Yandex Container Registry;;
+Infrastructure;Containers;Azure Container Registry;Small Registry;Additional storage Capacity;Container Registry;;Small Registry Unit;Microsoft.ContainerRegistry;Yandex Container Registry;;
+Infrastructure;Containers;Azure Container Registry;Basic Registry;Additional storage Capacity;Container Registry;;Basic Registry Unit;Microsoft.ContainerRegistry;Yandex Container Registry;;
+Infrastructure;Containers;Azure Container Registry;Standard Registry;Additional storage Capacity;Container Registry;;Standard Registry Unit;Microsoft.ContainerRegistry;Yandex Container Registry;;
+Infrastructure;Containers;Azure Container Registry;Premium Registry;Additional storage Capacity;Container Registry;;Premium Registry Unit;Microsoft.ContainerRegistry;Yandex Container Registry;;
+Application;AI;Azure Cortana Intelligence Suite;Customer Insights;Consumption Time;Cortana Intelligence;Customer Insights;Basic (Daily Unit);Microsoft.CustomerInsights;SpeechKit + DataSphere;Cloud ML Platform;
+Infrastructure;Storage;Azure Data Box;Data Box;Service Fee per Unit;Data Box;;;Microsoft.DataBox;Yandex Data Transfer;Cloud Storage;
+Data;Analitycs;Azure Data Lake Analytics;Analytics Unit;Unit usage per Hour;Data Lake Analytics;;Pay-as-you-go Analytics Units;Microsoft.DataLakeAnalytics;Yandex DataProc;Cloud Big Data;
+Data;Data Storage;Azure Data Lake Storage;Data Storage Gen1;Capacity in TB;Data Lake Store;;Pay-as-you-go Data at Rest;Microsoft.DataLakeStore;Object Storage;VK Cloud Storage;SberCloud
+Data;Data Storage;Azure Data Lake Storage;Data Storage Gen2;Transactions Amount;Data Lake Store;;%Transactions%;Microsoft.DataLakeStore;Object Storage;VK Cloud Storage;SberCloud
+Data;Data Storage;Azure Blob Storage;Data Storage Gen3;Operations and Data Transfer;Data Management;;Geo-Replicated Data Transfer%;;Object Storage;VK Cloud Storage;SberCloud
+Data;Data Storage;Azure Blob Storage;Data Storage;Storage Capacity;Data Management;Geo Redundant;Geo-Replicated Data Transfer%;Microsoft.DataLakeAnalytics;Object Storage;VK Cloud Storage;SberCloud
+Data;Data Storage;Azure Blob Storage;Data Storage;SSH File Transfer Protocol;Data Management;;Geo-Replicated Data Transfer%;Microsoft.DataLakeAnalytics;Object Storage;VK Cloud Storage;SberCloud
+Data;Data Storage;Microsoft Purview;Data Storage;Duration of Scans;Data Services;;Geo-Replicated Data Transfer%;Microsoft.DataLakeAnalytics;;;SberCloud
+Data;Data Analysis;Azure Synapse Analytics;Data Warehousing;Dedicated Consumption model;SQL Data Warehouse;Compute Optimized%;100 DWUs;Microsoft.Sql;Yandex Managed Service for YDB;Arenadata DB;
+Application;AI;Azure Machine Learning;ML Endpoints;Bandwith;Bandwidth;;%Data Transfer%;Microsoft.MachineLearningServices;Yandex DataSphere;VK Cloud ML Platform;
+Cloud Service;Content Delivery;Azure CDN;Acceleration Data Transfers;Bandwith;Bandwidth;;%Data Transfer%;Microsoft.Search;Yandex Cloud CDN;VK Content Delivery Network;
+Network;Network Diagnostics;Azure Network Watcher;Network Diagnostic Tool;Amount of Checks;Network Watcher;Network Watcher;Diagnostic Tool API;Microsoft.Network;Yandex Monitoring;VK Cloud Logging;Cloud Logging
+Network;Network Monitoring;Azure Monitor;Ingestion;Analytics Logs;Network Watcher;;%;microsoft.operationalinsights;Yandex Monitoring;VK Cloud Logging;Cloud Logging
+Network;Network Diagnostics;Azure Network Watcher;Network Performance;Units per Connections;Network Watcher;;%;Microsoft.Network;Yandex Monitoring;VK Cloud Logging;Cloud Logging
+Network;Appplication Gateway;Azure Application Gateway;Standard Application Getaway;Getaway-Hours;Application Gateway;Standard v2;Fixed Cost;Microsoft.Network;Yandex API Gateway;Load Balancer Vk Cloud;
+Network;Appplication Gateway;Azure Application Gateway;Standard Application Getaway;Capacity Unit-Hours;Application Gateway;Standard v2;Capacity Units;Microsoft.Network;Yandex API Gateway;Load Balancer Vk Cloud;
+Network;Appplication Gateway;Azure Application Gateway;Data Transfer;Data going into data centres;Application Gateway;Basic;%Data%;Microsoft.Network;Yandex API Gateway;Load Balancer Vk Cloud;
+Network;Appplication Gateway;Azure Application Gateway;Data Transfer;Amount of Data Processed;Application Gateway;Basic;%Gateway%;Microsoft.Network;Yandex API Gateway;Load Balancer Vk Cloud;
+Network;Appplication Gateway;Azure Application Gateway;Web Application Firewall Application Gateway V1;Gateway-Hour;Application Gateway;WAF;%Gateway%;Microsoft.Network;Yandex API Gateway;Load Balancer Vk Cloud;
+Network;Appplication Gateway;Azure Application Gateway;Web Application Firewall Application Gateway V2;Capacity Unit-Hours;Application Gateway;WAF v2;%Gateway%;Microsoft.Network;Yandex API Gateway;Load Balancer Vk Cloud;

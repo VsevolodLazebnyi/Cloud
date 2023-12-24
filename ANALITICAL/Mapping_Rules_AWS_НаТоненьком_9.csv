@@ -1,0 +1,42 @@
+IT Tower;Service Family;Service Type;Service Sub Type;Service Usage Type;Product Code;Usage Type; [lineItem/Operation];lineItem/LineItemDescription;Yandex Cloud;VK Cloud;ELSE
+Compute;Container Service;AWS Container Instanses;Compute Optimized;On-Demand Instances;AmazonEC2;%BoxUsage%;;;Yandex Compute Cloud;Cloud Servers;-
+Compute;Container Service;AWS Container Instanses;General Purpose;Virtual Machine;AmazonEC2;;;Tax%;Yandex Compute Cloud;Cloud Servers;-
+Compute;Savings Plans;AWS Savings Plans;Saving Plans;Saving Plans;ComputeSavingsPlans;ComputeSP%AllUpfront;;;Reserved Consumption;;-
+Compute;Savings Plans;AWS Savings Plans;Saving Plans;Saving Plans;ComputeSavingsPlans;ComputeSP%NoUpfront;;;Reserved Consumption;;-
+Compute;Container Service;AWS Container Instanses;Compute Optimized;Dedicated Instances;AmazonEC2;%DedicatedUsage%;Surcharge;;Yandex Compute Cloud;Cloud Servers;SberCloud
+Compute;Container Service;AWS Container Instanses;Compute Optimized;Dedicated Instances;AmazonEC2;%DedicatedUsage%;;;Yandex Compute Cloud;Cloud Servers;SberCloud
+Compute;Container Service;AWS Container Instanses;Physical Server;Dedicated Host;AmazonEC2;%HostUsage%;;;Yandex Compute Cloud;Cloud Servers;SberCloud
+Compute;Container Service;AWS Container Instanses;Graphics Optimized GPU;GPU Instances;AmazonEC2;%EGpuUsage%;;;Yandex Compute Cloud;Cloud Servers;SberCloud
+Compute;Container Service;AWS Container Instanses;Spot Instances;Spot Instances;AmazonEC2;%SpotUsage%;;;Yandex Compute Cloud;Cloud Servers;SberCloud
+Compute;Container Service;AWS Container Instanses;CPU Credits;T2/T3 CPU Credits;AmazonEC2;%CPUCredits%;;;Yandex Compute Cloud;Cloud Servers;SberCloud
+Compute;Container Service;AWS Container Instanses;All Upfront;Reserved Instance;AmazonEC2;%Purchase%;;Sign up charge for subscription:%;Yandex Compute Cloud;Cloud Servers;SberCloud
+Compute;Container Service;AWS Container Instanses;Instances Modification;Savings Plans Exchange;AmazonEC2;%ExchangeUsage;;;Yandex Compute Cloud;Cloud Servers;SberCloud
+Compute;Container Service;AWS Container Instanses;Compute Optimized;Heavy Utilization Instances;AmazonEC2;%HeavyUsage%;;;Yandex Compute Cloud;Cloud Servers;SberCloud
+Compute;Container Service;AWS Container Instanses;RI Resale ;RI Resale Service Fee;AmazonEC2RIResale2;%RIResaleServiceFee;;;Yandex Cloud Marketplace;VK Cloud Marketplace;SberCloud
+Cloud Service;Data Storage;AWS;RI Resale ;RI Resale ;AmazonCloudFront;;;Tax%;Yandex Cloud CDN;VK Content Delivery Network;SberDisk CDN
+Cloud Service;Data Storage;AWS;Request Handling;Tier 1 Requests;AmazonCloudFront;%Requests-Tier1;;;Yandex Cloud CDN;VK Content Delivery Network;SberDisk CDN
+Cloud Service;Data Storage;AWS;Request Handling;Tier 1 Requests;AmazonCloudFront;%Requests-Tier1;;;Yandex Cloud CDN;VK Content Delivery Network;SberDisk CDN
+Cloud Service;Data Storage;AWS;Dynamic Content Delivery;Tier 2 HTTP Requests;AmazonCloudFront;%Requests-Tier2-HTTPS;;;Yandex Cloud CDN;VK Content Delivery Network;SberDisk CDN
+Cloud Service;Data Storage;AWS;Static Content Delivery;HTTP Requests;AmazonCloudFront;%Requests-HTTP%;;;Yandex Cloud CDN;VK Content Delivery Network;SberDisk CDN
+Cloud Service;Data Storage;AWS;Content Delivery;Invalidation;AmazonCloudFront;%Invalidations;;;Yandex Cloud CDN;VK Content Delivery Network;SberDisk CDN
+Cloud Service;Data Storage;AWS;Media Streaming;Data Transfer;AmazonCloudFront;%FMS-Out-Bytes;;;Yandex Cloud CDN;VK Content Delivery Network;SberDisk CDN
+Cloud Service;Data Storage;AWS;Inter-region Data Transfer;Data Transfer;AmazonCloudFront;%DataTransfer%;;;Yandex Cloud CDN;VK Content Delivery Network;SberDisk CDN
+Cloud Service;Data Storage;AWS;Custom SSL Certificates;SSL Certificate Management;AmazonCloudFront;SSL-Cert-Custom;;;Yandex Cloud CDN;VK Content Delivery Network;SberDisk CDN
+application ;AI Diagnostic;Enterprise AI Search;Enterprise Edition;Enterprise Search;AmazonKendra;%KendraEnterpriseEdition;;;YandexGPT API;-;Sber GigaChat
+application ;AI Diagnostic;Enterprise AI Search;Document Processing;Document Scanning;AmazonKendra;%DocumentsScanned;;;YandexGPT API;-;Sber GigaChat
+application ;AI Diagnostic;Enterprise AI Search;Connector Sync;Data Synchronization;AmazonKendra;%ConnectorSync;;;YandexGPT API;-;Sber GigaChat
+application ;AI&ML Services;AWS;AI Chatbots;Voice Processing;AmazonLex;;;Tax%;Yandex SpeechKit + YandexDataSphere;-;Sber GigaChat
+application ;AI&ML Services;AWS;Request Processing;Lex Requests;AmazonLex;%Req%;;;Yandex SpeechKit + YandexDataSphere;Cloud Voice;Sber GigaChat
+Network DNS;Network/Delivery;DNS Service;;DNS Queries;AmazonRoute53;;;Tax%;Yandex Cloud DNS;VK Cloud DNS;SberDisk DNS
+Network DNS;Network/Delivery;DNS Service;Public DNS Queries;Health Check Services;AmazonRoute53;%Health-Check-Option-AWS;;;Yandex Cloud DNS;VK Cloud DNS;SberDisk DNS
+Network DNS;Network/Delivery;DNS Service;Monitoring;Health Check Services;AmazonRoute53;%Health-Check-AWS;;;Yandex Cloud DNS;VK Cloud DNS;SberDisk DNS
+Network DNS;Network/Delivery;DNS Service;Public DNS Queries;DNS Queries;AmazonRoute53;%DNS-Queries;;;Yandex Cloud DNS;VK Cloud DNS;SberDisk DNS
+Network DNS;Network/Delivery;DNS Service;Public LBR Queries;LBR Queries;AmazonRoute53;%LBR-Queries;;;Yandex Cloud DNS;VK Cloud DNS;SberDisk DNS
+Network DNS;Network/Delivery;DNS Service;DNS Queries;Internal DNS Queries;AmazonRoute53;%Intra-AWS-DNS-Queries;;;Yandex Cloud DNS;VK Cloud DNS;SberDisk DNS
+Network DNS;Network/Delivery;DNS Service;Hosted Zone;DNS Hosted Zone;AmazonRoute53;%HostedZone;;;Yandex Cloud DNS;VK Cloud DNS;SberDisk DNS
+Network DNS;Network/Delivery;DNS Service;Monitoring;Health Check Services;AmazonRoute53;%Health-Check-Non-AWS;;;Yandex Cloud DNS;VK Cloud DNS;SberDisk DNS
+Network DNS;Network/Delivery;DNS Service;Policy Management;Traffic Flow Policy;AmazonRoute53;%Traffic-Flow-Policy-Records;;;Yandex Cloud DNS;VK Cloud DNS;SberDisk DNS
+Network DNS;Network/Delivery;DNS Service;Monitoring;Health Check Services;AmazonRoute53;%Health-Check%;%Latency%;;Yandex Cloud DNS;VK Cloud DNS;SberDisk DNS
+Network DNS;Network/Delivery;DNS Service;Monitoring;Health Check Services;AmazonRoute53;%Health-Check-Option-Non-AWS;;;Yandex Cloud DNS;VK Cloud DNS;SberDisk DNS
+Network DNS;Network/Delivery;DNS Service;Geolocation Routing;DNS Geo Queries;AmazonRoute53;%Geo-Queries%;;;Yandex Cloud DNS;VK Cloud DNS;SberDisk DNS
+Network DNS;Network/Delivery;DNS Service;Network Interface Usage;Route 53 Resolver;AmazonRoute53;%ResolverNetworkInterface;;;Yandex Cloud DNS;VK Cloud DNS;SberDisk DNS

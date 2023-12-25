@@ -33,58 +33,51 @@
 # Аналитические ЛАБЫ
 
 <a name="Лабораторная AWS"></a>
-## Лабораторная AWS
+## Лабораторная Azure
 
 *Цель работы:* узнать о назначении различных облачных сервисов, проанализировать фичи, то, за что проходит оплата каждого из них, понять, к какому уровню абстракции относится каждый, исходя из этих знаний найти аналоги среди российских сервисов.
 
 ---
 **Дано:**
 Документ таблица:
-![awsanlab](https://github.com/VsevolodLazebnyi/cloud-ict-2023/blob/main/add/awsanlab.png?raw=true)
 
-|IT Tower     |Service Family   |Service Type           |Service Sub Type          |Service Usage Type         |Product Code       |Usage Type                  |[lineItem/Operation]|lineItem/LineItemDescription     |
-|-------------|-----------------|-----------------------|--------------------------|---------------------------|-------------------|----------------------------|--------------------|---------------------------------|
-|             |                 |                       |                          |                           |AmazonEC2          |%BoxUsage%                  |                    |                                 |
-|             |                 |                       |                          |                           |AmazonEC2          |                            |                    |Tax%                             |
-|             |                 |                       |                          |                           |ComputeSavingsPlans|ComputeSP%AllUpfront        |                    |                                 |
-|             |                 |                       |                          |                           |ComputeSavingsPlans|ComputeSP%NoUpfront         |                    |                                 |
-|             |                 |                       |                          |                           |AmazonEC2          |%DedicatedUsage%            |Surcharge           |                                 |
-|             |                 |                       |                          |                           |AmazonEC2          |%DedicatedUsage%            |                    |                                 |
-|             |                 |                       |                          |                           |AmazonEC2          |%HostUsage%                 |                    |                                 |
-|             |                 |                       |                          |                           |AmazonEC2          |%EGpuUsage%                 |                    |                                 |
-|             |                 |                       |                          |                           |AmazonEC2          |%SpotUsage%                 |                    |                                 |
-|             |                 |                       |                          |                           |AmazonEC2          |%CPUCredits%                |                    |                                 |
-|             |                 |                       |                          |                           |AmazonEC2          |%Purchase%                  |                    |Sign up charge for subscription:%|
-|             |                 |                       |                          |                           |AmazonEC2          |%ExchangeUsage              |                    |                                 |
-|             |                 |                       |                          |                           |AmazonEC2          |%HeavyUsage%                |                    |                                 |
-|             |                 |                       |                          |                           |AmazonEC2RIResale2 |%RIResaleServiceFee         |                    |                                 |
-|             |                 |                       |                          |                           |AmazonCloudFront   |                            |                    |Tax%                             |
-|             |                 |                       |                          |                           |AmazonCloudFront   |%Requests-Tier1             |                    |                                 |
-|             |                 |                       |                          |                           |AmazonCloudFront   |%Requests-Tier1             |                    |                                 |
-|             |                 |                       |                          |                           |AmazonCloudFront   |%Requests-Tier2-HTTPS       |                    |                                 |
-|             |                 |                       |                          |                           |AmazonCloudFront   |%Requests-HTTP%             |                    |                                 |
-|             |                 |                       |                          |                           |AmazonCloudFront   |%Invalidations              |                    |                                 |
-|             |                 |                       |                          |                           |AmazonCloudFront   |%FMS-Out-Bytes              |                    |                                 |
-|             |                 |                       |                          |                           |AmazonCloudFront   |%DataTransfer%              |                    |                                 |
-|             |                 |                       |                          |                           |AmazonCloudFront   |SSL-Cert-Custom             |                    |                                 |
-|             |                 |                       |                          |                           |AmazonKendra       |%KendraEnterpriseEdition    |                    |                                 |
-|             |                 |                       |                          |                           |AmazonKendra       |%DocumentsScanned           |                    |                                 |
-|             |                 |                       |                          |                           |AmazonKendra       |%ConnectorSync              |                    |                                 |
-|             |                 |                       |                          |                           |AmazonLex          |                            |                    |Tax%                             |
-|             |                 |                       |                          |                           |AmazonLex          |%Req%                       |                    |                                 |
-|             |                 |                       |                          |                           |AmazonRoute53      |                            |                    |Tax%                             |
-|             |                 |                       |                          |                           |AmazonRoute53      |%Health-Check-Option-AWS    |                    |                                 |
-|             |                 |                       |                          |                           |AmazonRoute53      |%Health-Check-AWS           |                    |                                 |
-|             |                 |                       |                          |                           |AmazonRoute53      |%DNS-Queries                |                    |                                 |
-|             |                 |                       |                          |                           |AmazonRoute53      |%LBR-Queries                |                    |                                 |
-|             |                 |                       |                          |                           |AmazonRoute53      |%Intra-AWS-DNS-Queries      |                    |                                 |
-|             |                 |                       |                          |                           |AmazonRoute53      |%HostedZone                 |                    |                                 |
-|             |                 |                       |                          |                           |AmazonRoute53      |%Health-Check-Non-AWS       |                    |                                 |
-|             |                 |                       |                          |                           |AmazonRoute53      |%Traffic-Flow-Policy-Records|                    |                                 |
-|             |                 |                       |                          |                           |AmazonRoute53      |%Health-Check%              |%Latency%           |                                 |
-|             |                 |                       |                          |                           |AmazonRoute53      |%Health-Check-Option-Non-AWS|                    |                                 |
-|             |                 |                       |                          |                           |AmazonRoute53      |%Geo-Queries%               |                    |                                 |
-|             |                 |                       |                          |                           |AmazonRoute53      |%ResolverNetworkInterface   |                    |                                 |
+|IT Tower|Service Family|Service Type|Service Sub Type|Service Usage Type|Meter Category      |Meter Sub-Category |Meter Name                   |Consumed Service                 |FIELD10|FIELD11|
+|--------|--------------|------------|----------------|------------------|--------------------|-------------------|-----------------------------|---------------------------------|-------|-------|
+|        |              |            |                |                  |Container Instances |Container Instances|Core Duration                |Microsoft.ContainerInstance      |       |       |
+|        |              |            |                |                  |Container Instances |Container Instances|Duration                     |Microsoft.ContainerInstance      |       |       |
+|        |              |            |                |                  |Container Instances |Container Instances|Executions                   |Microsoft.ContainerInstance      |       |       |
+|        |              |            |                |                  |Container Instances |                   |Memory Duration              |Microsoft.ContainerInstance      |       |       |
+|        |              |            |                |                  |Container Instances |                   |vCPU Duration                |Microsoft.ContainerInstance      |       |       |
+|        |              |            |                |                  |Container Registry  |Small              |Registry Unit                |Microsoft.ContainerRegistry      |       |       |
+|        |              |            |                |                  |Container Registry  |Basic              |Registry Unit                |Microsoft.ContainerRegistry      |       |       |
+|        |              |            |                |                  |Container Registry  |Standard           |Registry Unit                |Microsoft.ContainerRegistry      |       |       |
+|        |              |            |                |                  |Container Registry  |Premium            |Registry Unit                |Microsoft.ContainerRegistry      |       |       |
+|        |              |            |                |                  |Container Registry  |                   |%Duration                    |Microsoft.ContainerRegistry      |       |       |
+|        |              |            |                |                  |Container Registry  |                   |Small Registry Unit          |Microsoft.ContainerRegistry      |       |       |
+|        |              |            |                |                  |Container Registry  |                   |Basic Registry Unit          |Microsoft.ContainerRegistry      |       |       |
+|        |              |            |                |                  |Container Registry  |                   |Standard Registry Unit       |Microsoft.ContainerRegistry      |       |       |
+|        |              |            |                |                  |Container Registry  |                   |Premium Registry Unit        |Microsoft.ContainerRegistry      |       |       |
+|        |              |            |                |                  |Cortana Intelligence|Customer Insights  |Basic (Daily Unit)           |Microsoft.CustomerInsights       |       |       |
+|        |              |            |                |                  |Data Box            |                   |                             |Microsoft.DataBox                |       |       |
+|        |              |            |                |                  |Data Lake Analytics |                   |Pay-as-you-go Analytics Units|Microsoft.DataLakeAnalytics      |       |       |
+|        |              |            |                |                  |Data Lake Store     |                   |Pay-as-you-go Data at Rest   |Microsoft.DataLakeStore          |       |       |
+|        |              |            |                |                  |Data Lake Store     |                   |%Transactions%               |Microsoft.DataLakeStore          |       |       |
+|        |              |            |                |                  |Data Management     |                   |Geo-Replicated Data Transfer%|                                 |       |       |
+|        |              |            |                |                  |Data Management     |Geo Redundant      |                             |                                 |       |       |
+|        |              |            |                |                  |Data Management     |                   |                             |                                 |       |       |
+|        |              |            |                |                  |Data Services       |                   |                             |                                 |       |       |
+|        |              |            |                |                  |SQL Data Warehouse  |Compute Optimized% |100 DWUs                     |Microsoft.Sql                    |       |       |
+|        |              |            |                |                  |Bandwidth           |                   |%Data Transfer%              |Microsoft.MachineLearningServices|       |       |
+|        |              |            |                |                  |Bandwidth           |                   |%Data Transfer%              |Microsoft.Search                 |       |       |
+|        |              |            |                |                  |Network Watcher     |Network Watcher    |Diagnostic Tool API          |Microsoft.Network                |       |       |
+|        |              |            |                |                  |Network Watcher     |                   |%                            |microsoft.operationalinsights    |       |       |
+|        |              |            |                |                  |Network Watcher     |                   |%                            |Microsoft.Network                |       |       |
+|        |              |            |                |                  |Application Gateway |Standard v2        |Fixed Cost                   |Microsoft.Network                |       |       |
+|        |              |            |                |                  |Application Gateway |Standard v2        |Capacity Units               |Microsoft.Network                |       |       |
+|        |              |            |                |                  |Application Gateway |Basic              |%Data%                       |Microsoft.Network                |       |       |
+|        |              |            |                |                  |Application Gateway |Basic              |%Gateway%                    |Microsoft.Network                |       |       |
+|        |              |            |                |                  |Application Gateway |WAF                |%Gateway%                    |Microsoft.Network                |       |       |
+|        |              |            |                |                  |Application Gateway |WAF v2             |                             |Microsoft.Network                |       |       |
 
 
 
@@ -95,103 +88,127 @@
 ## Заполнение
 
 
-Список данных был просмотрен на сайте AWS amazon - [https://docs.aws.amazon.com/].
+Список данных был просмотрен на сайте windows azure - [https://azure.microsoft.com/ru-ru/products].
+Обобщенное описание многих сервисов - [https://ecm-journal.ru/material/Azure-Service-Platform] и [https://satyenkumar.medium.com/demystifying-the-cloud-computing-an-overview-of-the-microsoft-azure-6a5c1fb1799d].
+
 в соответствии с фильтрами, подобран самый вероятный ответ в ячейку таблицы.с 
 (проведен анализ списков сервисов и был подобран отечественный вариант Yandex, Vk, Else)
 
-![awssite](https://github.com/VsevolodLazebnyi/cloud-ict-2023/blob/main/add/awssite.png?raw=true)
+![azur1](https://github.com/VsevolodLazebnyi/cloud-ict-2023/blob/main/add/azur1.png?raw=true)
+![azur2](https://github.com/VsevolodLazebnyi/cloud-ict-2023/blob/main/add/azur2.png?raw=true)
 
-Все сервисы были расположены в порядке IT Tower от сетевого уровня к уровню приложений. 
-
-|IT Tower     |Service Family   |Service Type           |Service Sub Type          |Service Usage Type         |Product Code       |Usage Type                  |[lineItem/Operation]|lineItem/LineItemDescription     |Yandex Cloud                       |VK Cloud                   |ELSE         |
-|-------------|-----------------|-----------------------|--------------------------|---------------------------|-------------------|----------------------------|--------------------|---------------------------------|-----------------------------------|---------------------------|-------------|
-|Compute      |Container Service|AWS Container Instanses|Compute Optimized         |On-Demand Instances        |AmazonEC2          |%BoxUsage%                  |                    |                                 |Yandex Compute Cloud               |Cloud Servers              |-            |
-|Compute      |Container Service|AWS Container Instanses|General Purpose           |Virtual Machine            |AmazonEC2          |                            |                    |Tax%                             |Yandex Compute Cloud               |Cloud Servers              |-            |
-|Compute      |Savings Plans    |AWS Savings Plans      |Saving Plans              |Saving Plans               |ComputeSavingsPlans|ComputeSP%AllUpfront        |                    |                                 |Reserved Consumption               |                           |-            |
-|Compute      |Savings Plans    |AWS Savings Plans      |Saving Plans              |Saving Plans               |ComputeSavingsPlans|ComputeSP%NoUpfront         |                    |                                 |Reserved Consumption               |                           |-            |
-|Compute      |Container Service|AWS Container Instanses|Compute Optimized         |Dedicated Instances        |AmazonEC2          |%DedicatedUsage%            |Surcharge           |                                 |Yandex Compute Cloud               |Cloud Servers              |SberCloud    |
-|Compute      |Container Service|AWS Container Instanses|Compute Optimized         |Dedicated Instances        |AmazonEC2          |%DedicatedUsage%            |                    |                                 |Yandex Compute Cloud               |Cloud Servers              |SberCloud    |
-|Compute      |Container Service|AWS Container Instanses|Physical Server           |Dedicated Host             |AmazonEC2          |%HostUsage%                 |                    |                                 |Yandex Compute Cloud               |Cloud Servers              |SberCloud    |
-|Compute      |Container Service|AWS Container Instanses|Graphics Optimized GPU    |GPU Instances              |AmazonEC2          |%EGpuUsage%                 |                    |                                 |Yandex Compute Cloud               |Cloud Servers              |SberCloud    |
-|Compute      |Container Service|AWS Container Instanses|Spot Instances            |Spot Instances             |AmazonEC2          |%SpotUsage%                 |                    |                                 |Yandex Compute Cloud               |Cloud Servers              |SberCloud    |
-|Compute      |Container Service|AWS Container Instanses|CPU Credits               |T2/T3 CPU Credits          |AmazonEC2          |%CPUCredits%                |                    |                                 |Yandex Compute Cloud               |Cloud Servers              |SberCloud    |
-|Compute      |Container Service|AWS Container Instanses|All Upfront               |Reserved Instance          |AmazonEC2          |%Purchase%                  |                    |Sign up charge for subscription:%|Yandex Compute Cloud               |Cloud Servers              |SberCloud    |
-|Compute      |Container Service|AWS Container Instanses|Instances Modification    |Savings Plans Exchange     |AmazonEC2          |%ExchangeUsage              |                    |                                 |Yandex Compute Cloud               |Cloud Servers              |SberCloud    |
-|Compute      |Container Service|AWS Container Instanses|Compute Optimized         |Heavy Utilization Instances|AmazonEC2          |%HeavyUsage%                |                    |                                 |Yandex Compute Cloud               |Cloud Servers              |SberCloud    |
-|Compute      |Container Service|AWS Container Instanses|RI Resale                 |RI Resale Service Fee      |AmazonEC2RIResale2 |%RIResaleServiceFee         |                    |                                 |Yandex Cloud Marketplace           |VK Cloud Marketplace       |SberCloud    |
-|Cloud Service|Data Storage     |AWS                    |RI Resale                 |RI Resale                  |AmazonCloudFront   |                            |                    |Tax%                             |Yandex Cloud CDN                   |VK Content Delivery Network|SberDisk CDN |
-|Cloud Service|Data Storage     |AWS                    |Request Handling          |Tier 1 Requests            |AmazonCloudFront   |%Requests-Tier1             |                    |                                 |Yandex Cloud CDN                   |VK Content Delivery Network|SberDisk CDN |
-|Cloud Service|Data Storage     |AWS                    |Request Handling          |Tier 1 Requests            |AmazonCloudFront   |%Requests-Tier1             |                    |                                 |Yandex Cloud CDN                   |VK Content Delivery Network|SberDisk CDN |
-|Cloud Service|Data Storage     |AWS                    |Dynamic Content Delivery  |Tier 2 HTTP Requests       |AmazonCloudFront   |%Requests-Tier2-HTTPS       |                    |                                 |Yandex Cloud CDN                   |VK Content Delivery Network|SberDisk CDN |
-|Cloud Service|Data Storage     |AWS                    |Static Content Delivery   |HTTP Requests              |AmazonCloudFront   |%Requests-HTTP%             |                    |                                 |Yandex Cloud CDN                   |VK Content Delivery Network|SberDisk CDN |
-|Cloud Service|Data Storage     |AWS                    |Content Delivery          |Invalidation               |AmazonCloudFront   |%Invalidations              |                    |                                 |Yandex Cloud CDN                   |VK Content Delivery Network|SberDisk CDN |
-|Cloud Service|Data Storage     |AWS                    |Media Streaming           |Data Transfer              |AmazonCloudFront   |%FMS-Out-Bytes              |                    |                                 |Yandex Cloud CDN                   |VK Content Delivery Network|SberDisk CDN |
-|Cloud Service|Data Storage     |AWS                    |Inter-region Data Transfer|Data Transfer              |AmazonCloudFront   |%DataTransfer%              |                    |                                 |Yandex Cloud CDN                   |VK Content Delivery Network|SberDisk CDN |
-|Cloud Service|Data Storage     |AWS                    |Custom SSL Certificates   |SSL Certificate Management |AmazonCloudFront   |SSL-Cert-Custom             |                    |                                 |Yandex Cloud CDN                   |VK Content Delivery Network|SberDisk CDN |
-|application� |AI Diagnostic    |Enterprise AI Search   |Enterprise Edition        |Enterprise Search          |AmazonKendra       |%KendraEnterpriseEdition    |                    |                                 |YandexGPT API                      |-                          |Sber GigaChat|
-|application� |AI Diagnostic    |Enterprise AI Search   |Document Processing       |Document Scanning          |AmazonKendra       |%DocumentsScanned           |                    |                                 |YandexGPT API                      |-                          |Sber GigaChat|
-|application� |AI Diagnostic    |Enterprise AI Search   |Connector Sync            |Data Synchronization       |AmazonKendra       |%ConnectorSync              |                    |                                 |YandexGPT API                      |-                          |Sber GigaChat|
-|application� |AI&ML Services   |AWS                    |AI Chatbots               |Voice Processing           |AmazonLex          |                            |                    |Tax%                             |Yandex SpeechKit + YandexDataSphere|-                          |Sber GigaChat|
-|application� |AI&ML Services   |AWS                    |Request Processing        |Lex Requests               |AmazonLex          |%Req%                       |                    |                                 |Yandex SpeechKit + YandexDataSphere|Cloud Voice                |Sber GigaChat|
-|Network DNS  |Network/Delivery |DNS Service            |                          |DNS Queries                |AmazonRoute53      |                            |                    |Tax%                             |Yandex Cloud DNS                   |VK Cloud DNS               |SberDisk DNS |
-|Network DNS  |Network/Delivery |DNS Service            |Public DNS Queries        |Health Check Services      |AmazonRoute53      |%Health-Check-Option-AWS    |                    |                                 |Yandex Cloud DNS                   |VK Cloud DNS               |SberDisk DNS |
-|Network DNS  |Network/Delivery |DNS Service            |Monitoring                |Health Check Services      |AmazonRoute53      |%Health-Check-AWS           |                    |                                 |Yandex Cloud DNS                   |VK Cloud DNS               |SberDisk DNS |
-|Network DNS  |Network/Delivery |DNS Service            |Public DNS Queries        |DNS Queries                |AmazonRoute53      |%DNS-Queries                |                    |                                 |Yandex Cloud DNS                   |VK Cloud DNS               |SberDisk DNS |
-|Network DNS  |Network/Delivery |DNS Service            |Public LBR Queries        |LBR Queries                |AmazonRoute53      |%LBR-Queries                |                    |                                 |Yandex Cloud DNS                   |VK Cloud DNS               |SberDisk DNS |
-|Network DNS  |Network/Delivery |DNS Service            |DNS Queries               |Internal DNS Queries       |AmazonRoute53      |%Intra-AWS-DNS-Queries      |                    |                                 |Yandex Cloud DNS                   |VK Cloud DNS               |SberDisk DNS |
-|Network DNS  |Network/Delivery |DNS Service            |Hosted Zone               |DNS Hosted Zone            |AmazonRoute53      |%HostedZone                 |                    |                                 |Yandex Cloud DNS                   |VK Cloud DNS               |SberDisk DNS |
-|Network DNS  |Network/Delivery |DNS Service            |Monitoring                |Health Check Services      |AmazonRoute53      |%Health-Check-Non-AWS       |                    |                                 |Yandex Cloud DNS                   |VK Cloud DNS               |SberDisk DNS |
-|Network DNS  |Network/Delivery |DNS Service            |Policy Management         |Traffic Flow Policy        |AmazonRoute53      |%Traffic-Flow-Policy-Records|                    |                                 |Yandex Cloud DNS                   |VK Cloud DNS               |SberDisk DNS |
-|Network DNS  |Network/Delivery |DNS Service            |Monitoring                |Health Check Services      |AmazonRoute53      |%Health-Check%              |%Latency%           |                                 |Yandex Cloud DNS                   |VK Cloud DNS               |SberDisk DNS |
-|Network DNS  |Network/Delivery |DNS Service            |Monitoring                |Health Check Services      |AmazonRoute53      |%Health-Check-Option-Non-AWS|                    |                                 |Yandex Cloud DNS                   |VK Cloud DNS               |SberDisk DNS |
-|Network DNS  |Network/Delivery |DNS Service            |Geolocation Routing       |DNS Geo Queries            |AmazonRoute53      |%Geo-Queries%               |                    |                                 |Yandex Cloud DNS                   |VK Cloud DNS               |SberDisk DNS |
-|Network DNS  |Network/Delivery |DNS Service            |Network Interface Usage   |Route 53 Resolver          |AmazonRoute53      |%ResolverNetworkInterface   |                    |                                 |Yandex Cloud DNS                   |VK Cloud DNS               |SberDisk DNS |
+|IT Tower     |Service Family   |Service Type           |Service Sub Type          |Service Usage Type         |Meter Category     |Meter Sub-Category          |Meter Name|Consumed Service                 |YandexCloud Service           |YandexCloud Service        |Else         |
+|-------------|-----------------|-----------------------|--------------------------|---------------------------|-------------------|----------------------------|----------|---------------------------------|------------------------------|---------------------------|-------------|
+|Compute      |Containers       |Azure Container Instanses|Container group           |Compute Hours              |Container Instances|Container Instances         |Core Duration|Microsoft.ContainerInstance      | Yandex Serverless Containers |Cloud Containers           |SberCloud    |
+|Compute      |Containers       |Azure Container Instanses|Container group           |Compute Hours              |Container Instances|Container Instances         |Duration  |Microsoft.ContainerInstance      | Yandex Serverless Containers |Cloud Containers           |SberCloud    |
+|Compute      |Containers       |Azure Container Instanses|Container group           |Number of Executions       |Container Instances|Container Instances         |Executions|Microsoft.ContainerInstance      | Yandex Serverless Containers |Cloud Containers           |SberCloud    |
+|Compute      |Containers       |Azure Container Instanses|Container group           |Compute Hours              |Container Instances|                            |Memory Duration|Microsoft.ContainerInstance      | Yandex Serverless Containers |Cloud Containers           |SberCloud    |
+|Compute      |Containers       |Azure Container Instanses|Container group           |Compute Hours              |Container Instances|                            |vCPU Duration|Microsoft.ContainerInstance      | Yandex Serverless Containers |Cloud Containers           |SberCloud    |
+|Infrastructure|Containers       |Azure Container Registry|Small Registry            |Storage Capacity           |Container Registry |Small                       |Registry Unit|Microsoft.ContainerRegistry      |Yandex Container Registry     |                           |             |
+|Infrastructure|Containers       |Azure Container Registry|Registry                  |Storage Capacity           |Container Registry |Basic                       |Registry Unit|Microsoft.ContainerRegistry      |Yandex Container Registry     |                           |             |
+|Infrastructure|Containers       |Azure Container Registry|Standard Registry         |Storage Capacity           |Container Registry |Standard                    |Registry Unit|Microsoft.ContainerRegistry      |Yandex Container Registry     |                           |             |
+|Infrastructure|Containers       |Azure Container Registry|Premium Registry          |Storage Capacity           |Container Registry |Premium                     |Registry Unit|Microsoft.ContainerRegistry      |Yandex Container Registry     |                           |             |
+|Infrastructure|Containers       |Azure Container Registry|Additional Storage        |Compute Hours              |Container Registry |                            |%Duration |Microsoft.ContainerRegistry      |Yandex Container Registry     |                           |             |
+|Infrastructure|Containers       |Azure Container Registry|Small Registry            |Additional storage Capacity|Container Registry |                            |Small Registry Unit|Microsoft.ContainerRegistry      |Yandex Container Registry     |                           |             |
+|Infrastructure|Containers       |Azure Container Registry|Basic Registry            |Additional storage Capacity|Container Registry |                            |Basic Registry Unit|Microsoft.ContainerRegistry      |Yandex Container Registry     |                           |             |
+|Infrastructure|Containers       |Azure Container Registry|Standard Registry         |Additional storage Capacity|Container Registry |                            |Standard Registry Unit|Microsoft.ContainerRegistry      |Yandex Container Registry     |                           |             |
+|Infrastructure|Containers       |Azure Container Registry|Premium Registry          |Additional storage Capacity|Container Registry |                            |Premium Registry Unit|Microsoft.ContainerRegistry      |Yandex Container Registry     |                           |             |
+|Application  |AI               |Azure Cortana Intelligence Suite|Customer Insights         |Consumption Time           |Cortana Intelligence|Customer Insights           |Basic (Daily Unit)|Microsoft.CustomerInsights       |SpeechKit + DataSphere        |Cloud ML Platform          |             |
+|Infrastructure|Storage          |Azure Data Box         |Data Box                  |Service Fee per Unit       |Data Box           |                            |          |Microsoft.DataBox                |Yandex Data Transfer          |Cloud Storage              |             |
+|Data         |Analitycs        |Azure Data Lake Analytics|Analytics Unit            |Unit usage per Hour        |Data Lake Analytics|                            |Pay-as-you-go Analytics Units|Microsoft.DataLakeAnalytics      |Yandex DataProc               |Cloud Big Data             |             |
+|Data         |Data Storage     |Azure Data Lake Storage|Data Storage Gen1         |Capacity in TB             |Data Lake Store    |                            |Pay-as-you-go Data at Rest|Microsoft.DataLakeStore          |Object Storage                |VK Cloud Storage           |SberCloud    |
+|Data         |Data Storage     |Azure Data Lake Storage|Data Storage Gen2         |Transactions Amount        |Data Lake Store    |                            |%Transactions%|Microsoft.DataLakeStore          |Object Storage                |VK Cloud Storage           |SberCloud    |
+|Data         |Data Storage     |Azure Blob Storage     |Data Storage Gen3         |Operations and Data Transfer|Data Management    |                            |Geo-Replicated Data Transfer%|                                 |Object Storage                |VK Cloud Storage           |SberCloud    |
+|Data         |Data Storage     |Azure Blob Storage     |Data Storage              |Storage Capacity           |Data Management    |Geo Redundant               |Geo-Replicated Data Transfer%|Microsoft.DataLakeAnalytics      |Object Storage                |VK Cloud Storage           |SberCloud    |
+|Data         |Data Storage     |Azure Blob Storage     |Data Storage              |SSH File Transfer Protocol |Data Management    |                            |Geo-Replicated Data Transfer%|Microsoft.DataLakeAnalytics      |Object Storage                |VK Cloud Storage           |SberCloud    |
+|Data         |Data Storage     |Microsoft Purview      |Data Storage              |Duration of Scans          |Data Services      |                            |Geo-Replicated Data Transfer%|Microsoft.DataLakeAnalytics      |                              |                           |SberCloud    |
+|Data         |Data Analysis    |Azure Synapse Analytics|Data Warehousing          |Dedicated Consumption model|SQL Data Warehouse |Compute Optimized%          |100 DWUs  |Microsoft.Sql                    |Yandex Managed Service for YDB|Arenadata DB               |             |
+|Application  |AI               |Azure Machine Learning |ML Endpoints              |Bandwith                   |Bandwidth          |                            |%Data Transfer%|Microsoft.MachineLearningServices|Yandex DataSphere             |VK Cloud ML Platform       |             |
+|Cloud Service|Content Delivery |Azure CDN              |Acceleration Data Transfers|Bandwith                   |Bandwidth          |                            |%Data Transfer%|Microsoft.Search                 |Yandex Cloud CDN              |VK Content Delivery Network|             |
+|Network      |Network Diagnostics|Azure Network Watcher  |Network Diagnostic Tool   |Amount of Checks           |Network Watcher    |Network Watcher             |Diagnostic Tool API|Microsoft.Network                |Yandex Monitoring             |VK Cloud Logging           |Cloud Logging|
+|Network      |Network Monitoring|Azure Monitor          |Ingestion                 |Analytics Logs             |Network Watcher    |                            |%         |microsoft.operationalinsights    |Yandex Monitoring             |VK Cloud Logging           |Cloud Logging|
+|Network      |Network Diagnostics|Azure Network Watcher  |Network Performance       |Units per Connections      |Network Watcher    |                            |%         |Microsoft.Network                |Yandex Monitoring             |VK Cloud Logging           |Cloud Logging|
+|Network      |Appplication Gateway|Azure Application Gateway|Standard Application Getaway|Getaway-Hours              |Application Gateway|Standard v2                 |Fixed Cost|Microsoft.Network                |Yandex API Gateway            |Load Balancer Vk Cloud     |             |
+|Network      |Appplication Gateway|Azure Application Gateway|Standard Application Getaway|Capacity Unit-Hours        |Application Gateway|Standard v2                 |Capacity Units|Microsoft.Network                |Yandex API Gateway            |Load Balancer Vk Cloud     |             |
+|Network      |Appplication Gateway|Azure Application Gateway|Data Transfer             |Data going into data centres|Application Gateway|Basic                       |%Data%    |Microsoft.Network                |Yandex API Gateway            |Load Balancer Vk Cloud     |             |
+|Network      |Appplication Gateway|Azure Application Gateway|Data Transfer             |Amount of Data Processed   |Application Gateway|Basic                       |%Gateway% |Microsoft.Network                |Yandex API Gateway            |Load Balancer Vk Cloud     |             |
+|Network      |Appplication Gateway|Azure Application Gateway|Web Application Firewall Application Gateway V1|Gateway-Hour               |Application Gateway|WAF                         |%Gateway% |Microsoft.Network                |Yandex API Gateway            |Load Balancer Vk Cloud     |             |
+|Network      |Appplication Gateway|Azure Application Gateway|Web Application Firewall Application Gateway V2|Capacity Unit-Hours        |Application Gateway|WAF v2                      |%Gateway% |Microsoft.Network                |Yandex API Gateway            |Load Balancer Vk Cloud     |             |
 
 
 ---
 
 ## ***Описание сервисов Azure*** ## 
 
-__Amazon EC2__ облачная платформа с тысячами экземпляров, поддерживающая разные типы процессоров и предоставляющая гибкие тарифы для различных рабочих нагрузок.
+__Azure Container Instances__ Это сервис для запуска контейнеров (Linux и Windows) в облаке без необходимости виртуальных машин или инструментов для оркестрации. Поддерживает управление через командную строку, хранение данных и настройки для доступа к виртуальным сетям.
 
-__Compute Savings Plans__ предлагает скидки на вычислительные мощности при условии их использования в течение года или трёх лет.
+__Azure Container Registry__ Служба хранения и управления образами контейнеров без пользовательского интерфейса, доступная только через командную строку.
 
-__Reserved Consumption__ позволяет получить скидку до 22% за бронирование ресурсов на 6 месяцев или год вперёд.
+__Azure Cortana Intelligence Suite__ Предоставляет возможности для анализа данных и искусственного интеллекта, включая Power BI, HDInsight Spark, инструменты для машинного обучения и интеграцию с Cortana, а также поддержку ботов и инструменты для обработки естественного языка.
 
-__AmazonEC2RIResale2__ это Reserved Instance Marketplace, где можно купить или продать неиспользуемые экземпляры.
+__Azure Data Box__ Сервис для безопасной транспортировки больших объемов данных в облако без интернета, используя протоколы NAS.
 
-__AmazonCloudFront__ content delivery network для быстрой и безопасной доставки контента, ускорения загрузки сайтов и защиты от DDoS-атак.
+__Azure Data Lake Analytics__ Сервис для анализа больших данных с масштабируемыми вычислительными возможностями, позволяющий выполнение аналитики с использованием U-SQL.
 
-__Amazon Kendra__ поисковый сервис, использующий AI для эффективного поиска информации, особенно в специфических областях.
+__Azure Data Lake Store__ Масштабируемое хранилище данных, оптимизированное для анализа больших объемов данных и совместимое с Apache Hadoop.
 
-__Amazon Lex__ сервис создания интерфейсов на базе AI, позволяющий разрабатывать и тестировать чат-ботов с использованием распознавания речи.
+__Arenadata DB__ Аналитическая база данных для хранения и обработки больших данных в облаке, интегрирующаяся с сервисами анализа данных.
 
-__Amazon Route53__ DNS-сервис, обеспечивающий маршрутизацию трафика, мониторинг и лёгкую настройку ремаршрутизации.
+__Microsoft Purview__ Централизованный сервис управления данными в облаке и локальных средах с аналитикой, схемами данных и автоматизированным получением метаданных.
+
+__Azure Machine Learning__ Сервис для автоматизации выбора моделей машинного обучения с поддержкой различных языков и библиотек, обеспечивающий высокую защиту данных.
+
+__Azure CDN__ Инфраструктура для быстрой доставки контента по всему миру с масштабированием и поддержкой HTTPS и защитой от DDoS.
+
+__Azure Network Watcher__ Инструмент для мониторинга и управления сетевыми элементами в Azure, включая анализ состояния сети и трафика.
+
+__Azure Application Gateway__ Управляет трафиком к веб-приложениям с функциями защиты, маршрутизации на уровне приложения, SSL завершением и управлением сессиями.
+
 
 ----
-## ***российских аналогов (Yandex Cloud и VK Cloud)*** ##
+## ***отечественные аналоги *** ##
 
-__Yandex Compute Cloud__  Аналог EC2 с большим выбором процессоров, посекундная тарификация, оплата по использованию CPU/RAM и дисков.
+__Yandex Serverless Containers__ Сервис для запуска контейнеров без управления серверами, с автоматическим масштабированием и оплатой по факту использования ресурсов.
 
-__Cloud Servers__ Предлагает разнообразие ОС, включая российские дистрибутивы, привлекательно для государственных компаний. Посекундный биллинг, различные тарифы.
+__Cloud Containers (VK)__ Аналогичен Yandex Serverless Containers, но ориентирован только на Kubernetes. Предоставляет богатые метрики и инструменты мониторинга.
+
+__Yandex Container Registry__ Хранилище Docker-образов с поддержкой развёртывания и управления контейнерами, предоставляющее различные инструменты управления и взаимодействия с образами.
+
+__VK Cloud__ Нет узкоспециализированных сервисов, только общий сервис для облачного оркестратора.
 
 __Cloud Voice__ Подходит для автораспознавания и синтеза речи, работает стабильно, поддерживает потоковое аудио и звуковые файлы.
 
-__Yandex Cloud Marketplace__ B2C рынок с выбором продуктов от различных вендоров, включая БД, сетевую инфраструктуру и многое другое.
+__Yandex Data Transfer__ Платформа для миграции данных, позволяющая переносить большие объемы данных с минимальным временем простоя.
 
-__VK Cloud Marketplace__ Подобный Yandex Marketplace, управляемый и тарифицируемый самим ВК, включает как опенсорс, так и предоставляемые сервисы.
+__Cloud Storage__ Хранилище данных для VK Cloud, предоставляющее место для хранения данных различных типов.
 
-__Yandex Cloud CDN__ Почти идентичен функционалом, с акцентом на рынок Восточной Европы и России, предоставляет аналитику трафика, защиту от DDoS и более доступные цены.
+__Yandex DataProc__ Сервис обработки больших объемов данных, взаимодействующий с Hadoop, Spark и другими системами для ETL и других видов обработки данных.
 
-__VK Content Delivery Network__ Аналогичный функционал CDN с более низкой задержкой и ЦОДами на 5 континентах.
+__Cloud Big Data__ Решение для анализа больших объемов данных, включающее Apache Hadoop и поддерживающее работу с озёрами данных.
 
-__YandexGPT API__ Решение команды Яндекса для бизнеса и приложений, помогает улучшать контент, бесплатен с лимитом запросов, требует подписку для большего количества запросов, может быть дообучен через DataSphere.
+__Yandex Object Storage__ Хранилище для больших объемов данных с высокой доступностью и автоматическим масштабированием, с поддержкой Apache Airflow из коробки.
 
-__VK Cloud__ Предлагает только Cloud Vision для распознавания текста, объектов на фото и видео, а также для автоматизации.
+__VK Cloud Storage__ Широкопрофильное решение для хранения данных, включая большие данные и Data Lakes, с поддержкой различных инструментов для работы с хранилищем.
 
-__Yandex Cloud DNS__ Предоставляет создание доменных зон, оптимизацию запросов, мониторинг и конфигурацию через различные инструменты.
+__Azure Synapse Analytics__ Платформа для обработки и анализа масштабных датасетов, объединяющая преимущества больших данных и аналитических возможностей.
 
-__VK Cloud DNS__ Предоставляет приватный и публичный DNS с простой настройкой.
+__Yandex Managed Service for YDB__  Управляемая база данных с гибкими возможностями обработки данных с использованием SQL и NoSQL методов.
+
+__Yandex DataSphere__ Платформа для разработки, анализа и внедрения данных и моделей машинного обучения в облаке.
+
+__VK Cloud ML Platform__ Облачная среда для создания и внедрения моделей машинного обучения с инструментами для разработки и хранения в российских ЦОДах.
+
+__Yandex Cloud CDN__ Уменьшает нагрузку на основной сервер через распределение и кэширование. Более 140 CDN-ов, предоставляет инструменты аналитики трафика.
+
+__VK Content Delivery Network__ Разгружает основной сервер, принимая на себя весь трафик. Обещает среднюю задержку в 20 мс и более 400 ЦОДов на 5 континентах.
+
+__Yandex Monitoring__ Позволяет отслеживать состояние и производительность ресурсов в реальном времени, анализировать логи. Cloud Logging специализируется на работе с логами.
+
+__VK Cloud Logging__ Собирает, анализирует и хранит данные о событиях, обеспечивает быстрый поиск и визуализацию данных для мониторинга приложений и системы.
+
+__Yandex API Gateway__  Аналог от Microsoft, но позволяет создавать API-шлюзы для связи внешних приложений с внутренними ресурсами компании.
+
+__Load Balancer Vk Cloud__ Отказоустойчивый балансировщик веб-трафика с автомасштабированием. Предоставляет аналитику для решения проблем, использует продвинутые алгоритмы для выбора оптимального сервера для каждого запроса.
 
 __SberCloud__ Провайдер услуг и сервисов по моделям IaaS и PaaS (IT-инфраструктура в аренду) для бизнеса и государственных организаций.
 
@@ -200,8 +217,7 @@ __Sber GigaChat__ нейросеть от Сбера, которая умеет 
 ----
 ## Вывод
 
-В результате выполнения данной лабораторной работы была сформирована и заполнена таблица с данными из документации Amazon. Были проанализированы и описаны 10 сервисов, а также получены данные о подтипах этих сервисов и других характеристиках.
-Также была достигнута цель нашей работы - было сформировано понимание типов потребления сервисов в сервисной модели.
+В результате выполнения данной лабораторной работы была сформирована и заполнена таблица с данными из документации Amazon. Были проанализированы и описаны сервисы azure и их отечественные аналоги, а также получены данные о подтипах этих сервисов и других характеристиках.
 
 
 Все готово!

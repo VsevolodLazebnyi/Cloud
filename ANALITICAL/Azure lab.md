@@ -136,6 +136,8 @@
 |Network      |Appplication Gateway|Azure Application Gateway|Web Application Firewall Application Gateway V2|Capacity Unit-Hours        |Application Gateway|WAF v2                      |%Gateway% |Microsoft.Network                |Yandex API Gateway            |Load Balancer Vk Cloud     |             |
 
 
+![azureanlab](https://github.com/VsevolodLazebnyi/cloud-ict-2023/blob/main/add/azureanlab.png?raw=true)
+
 ---
 
 ## ***Описание сервисов Azure*** ## 
